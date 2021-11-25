@@ -14,6 +14,8 @@
   --header-brd-line-color: #ececec;
   --card-progects-gap: 30px;
   --svg-fill-color: #afb1b8;
+  --animation-duration: 250ms;
+  --animation-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* border-boxing */
 html {
@@ -64,6 +66,14 @@ img {
 .main-nav {
   display: flex;
   align-items: center;
+}
+.link {
+  position: relative;
+}
+.current::after {
+content: '';
+position: absolute;
+
 }
 /* logo */
 .logo {
@@ -528,8 +538,49 @@ img {
   align-items: center;
   justify-content: space-between;
 }
-.footer-item {
+/* .footer-item {
+} */
+/* modal vindow */
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;  
+  /* overflow: auto; */
+  background: rgba(0, 0, 0, 0.2);
 }
+.backdrop.is-hidden {
+opacity: 0;
+pointer-events: none;
+}
+.modal {
+  position: absolute;
+  min-width: 528px;
+  min-height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--first-section-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 4px;
+}
+.modal-button {
+box-sizing: border-box;
+position: absolute;
+top: 8px;
+align-items: center;
+right: 8px;
+width: 30px;
+height: 30px;
+background-color: var(--first-section-color);
+border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 50%;
+}
+
+
+
+
 /* portfolio page */
 .portfolio {
   background-color: var(--first-section-color);
@@ -548,6 +599,7 @@ img {
 }
 .project {
   display: inline-block;
+  position: relative;
   background-color: var(--section-text-color);
 }
 .project > a {
@@ -555,6 +607,7 @@ img {
 }
 .working-project {
   display: block;
+  /* position: relative; */
   width: 100%;
   height: 100%;
 }
@@ -563,6 +616,47 @@ img {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+/* .project-description {
+  position: absolute;
+  width: 100%;
+  height: 294px;
+  bottom: 110px; */
+  /* opacity: 0; */
+}
+.project-text {
+  display: block;
+  margin: 0;
+  padding: 63px 27px;
+  /* position: absolute; */
+  /* font-weight: 400; */
+  font-size: 18px;
+  line-height: 1.55;
+  margin-top: 0px;
+  /* margin-bottom: 20px; */
+  letter-spacing: 0.03em;
+  color: var(--section-text-color);
+  background: rgba(33, 150, 243, 0.9);
+  /* text-transform: ; */
+}
+.project-description::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 370px;
+  height: 294px;
+  bottom: 110px;
+  opacity: 0;
+  /* opacity: 1; */
+}
+.project:hover::before {
+  opacity: 1;
+}
+/* .working-project:hover,
+.working-project:focus {
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+} */
 .image {
   display: block;
   margin-top: 0px;
