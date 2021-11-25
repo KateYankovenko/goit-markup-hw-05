@@ -274,6 +274,22 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+.section-title {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.inscription {
+  display: block;
+  text-align: center;
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  color: var(--section-text-color);
+}
 .preferences {
   display: flex;
   justify-content: center;
@@ -310,6 +326,17 @@ img {
 .occ-img {
   display: block;
 }
+.occupation-item {
+  position: relative;
+  align-items: center;
+}
+.card-inscript {
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  top: 224px;
+  background: rgba(47, 48, 58, 0.8);
+}
 /* studio band */
 .band {
   background: var(--second-section-color);
@@ -344,14 +371,6 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-.section-title {
-  margin-top: 0px;
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
 }
 .section-depict {
   padding: 0px;
