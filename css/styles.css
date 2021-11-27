@@ -7,6 +7,7 @@
   --button-hover-color: #188ce8;
   --filter-button-color: #f5f4fa;
   --shadow-color: rgba(31, 21, 21, 0.15);
+  --box-shadow: rgba(0, 0, 0, 0.15);
   --section-color: #2f303a;
   --first-section-color: #ffffff;
   --second-section-color: #f5f4fa;
@@ -90,6 +91,18 @@ img {
 .site-nav .list-item + .list-item {
   margin-left: 50px;
 }
+.link {
+  position: relative;
+
+  transition-property: background-color;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-function);
+}
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+  text-decoration: none;
+}
 .site-nav .link {
   display: block;
   padding-top: 32px;
@@ -112,64 +125,22 @@ img {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0px;
+  bottom: 0;
   width: 48px;
   height: 4px;
-  opacity: 1;
   background: var(--accent-color);
   border-radius: 2px;
 }
-.link {
-  position: relative;
-
-  transition-property: background-color;
-  transition-duration: var(--animation-duration);
-  transition-timing-function: var(--animation-function);
-}
-.link:hover,
-.link:focus {
-  color: var(--accent-color);
-  text-decoration: none;
-}
-
-/* .higher::after {
-  content: "";
-  position: absolute;
-  width: 48px;
-  height: 4px;
-  left: 453px;
-  top: 76px;
-  background: var(--accent-color);
-  border-radius: 2px;
-} */
-/* .current::after {
+.prtf-page::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -32px;
-  width: 48px;
+  bottom: 0;
+  width: 78px;
   height: 4px;
-  opacity: 1;
   background: var(--accent-color);
   border-radius: 2px;
-} */
-/* .current:hover::after {
-  transition-property: background-color;
-  transition-duration: var(--animation-duration);
-  transition-timing-function: var(--animation-function);
-} */
-/* logo */
-
-/* .link-current::after {
-content: "";
-position: absolute;
-width: 48px;
-height: 4px;
-left: 453px;
-top: 76px;
-background: #2196F3;
-border-radius: 2px;
-} */
+}
 /* header contacts */
 .contact {
   display: flex;
@@ -224,7 +195,6 @@ border-radius: 2px;
   min-height: 50px;
   margin-top: 0px;
   margin-bottom: 0px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--section-text-color);
   background: var(--accent-color);
   font-family: inherit;
@@ -243,7 +213,7 @@ border-radius: 2px;
 .button:focus {
   color: var(--section-text-color);
   background: var(--button-hover-color);
-  box-shadow: var(--shadow-color);
+  box-shadow: 0px 4px 4px var(--box-shadow);
 }
 /* portfolio filter */
 .filter {
@@ -303,6 +273,8 @@ border-radius: 2px;
 .filter-button:focus {
   color: var(--section-text-color);
   background: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* sections */
 .section {
