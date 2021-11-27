@@ -75,9 +75,19 @@ img {
   transition-duration: var(--animation-duration);
   transition-timing-function: var(--animation-function);
 }
+.current {
+  color: var(--accent-color);
+}
+
 .current::after {
   content: "";
   position: absolute;
+  width: 48px;
+  height: 4px;
+  left: 453px;
+  top: 76px;
+  background: var(--accent-color);
+  border-radius: 2px;
 }
 /* logo */
 .logo {
@@ -95,6 +105,7 @@ img {
 }
 /* site links features*/
 .site-nav {
+  position: relative;
   display: flex;
   margin-left: 93px;
 }
