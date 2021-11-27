@@ -64,32 +64,6 @@ img {
   border-bottom: 1px solid var(--header-brd-line-color);
   background-color: var(--first-section-color);
 }
-.main-nav {
-  display: flex;
-  align-items: center;
-}
-.link {
-  position: relative;
-
-  transition-property: background-color;
-  transition-duration: var(--animation-duration);
-  transition-timing-function: var(--animation-function);
-}
-.current {
-  color: var(--accent-color);
-}
-
-.current::after {
-  content: "";
-  position: absolute;
-  width: 48px;
-  height: 4px;
-  left: 453px;
-  top: 76px;
-  background: var(--accent-color);
-  border-radius: 2px;
-}
-/* logo */
 .logo {
   color: var(--accent-color);
   font-family: Raleway, sans-serif;
@@ -102,6 +76,10 @@ img {
 }
 .logo-ft-accent {
   color: var(--section-text-color);
+}
+.main-nav {
+  display: flex;
+  align-items: center;
 }
 /* site links features*/
 .site-nav {
@@ -127,11 +105,71 @@ img {
   color: var(--accent-color);
   text-decoration: none;
 }
+.current {
+  color: var(--accent-color);
+}
+.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 48px;
+  height: 4px;
+  opacity: 1;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+.link {
+  position: relative;
+
+  transition-property: background-color;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-function);
+}
 .link:hover,
 .link:focus {
   color: var(--accent-color);
   text-decoration: none;
 }
+
+/* .higher::after {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 4px;
+  left: 453px;
+  top: 76px;
+  background: var(--accent-color);
+  border-radius: 2px;
+} */
+/* .current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -32px;
+  width: 48px;
+  height: 4px;
+  opacity: 1;
+  background: var(--accent-color);
+  border-radius: 2px;
+} */
+/* .current:hover::after {
+  transition-property: background-color;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-function);
+} */
+/* logo */
+
+/* .link-current::after {
+content: "";
+position: absolute;
+width: 48px;
+height: 4px;
+left: 453px;
+top: 76px;
+background: #2196F3;
+border-radius: 2px;
+} */
 /* header contacts */
 .contact {
   display: flex;
