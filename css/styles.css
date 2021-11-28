@@ -121,7 +121,7 @@ img {
 .current {
   color: var(--accent-color);
 }
-.current::after {
+.studio-page::after {
   content: "";
   position: absolute;
   left: 0;
@@ -130,6 +130,7 @@ img {
   height: 4px;
   background: var(--accent-color);
   border-radius: 2px;
+  opacity: 0;
 }
 .prtf-page::after {
   content: "";
@@ -140,6 +141,36 @@ img {
   height: 4px;
   background: var(--accent-color);
   border-radius: 2px;
+  opacity: 0;
+}
+.contacts-page::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 68px;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
+  opacity: 0;
+}
+.studio-page:hover::after {
+  opacity: 1;
+}
+.studio-page:hover {
+  color: var(--accent-color);
+}
+.prtf-page:hover::after {
+  opacity: 1;
+}
+.prtf-page:hover {
+  color: var(--accent-color);
+}
+.contacts-page:hover::after {
+  opacity: 1;
+}
+.contacts-page:hover {
+  color: var(--accent-color);
 }
 /* header contacts */
 .contact {
