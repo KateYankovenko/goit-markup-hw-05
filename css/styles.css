@@ -12,6 +12,7 @@
   --first-section-color: #ffffff;
   --second-section-color: #f5f4fa;
   --ftr-cnt-color: rgba(255, 255, 255, 0.6);
+  --ftr-link-color: rgba(255, 255, 255, 0.1);
   --header-brd-line-color: #ececec;
   --card-progects-gap: 30px;
   --svg-fill-color: #afb1b8;
@@ -94,7 +95,7 @@ img {
 .link {
   position: relative;
 
-  transition-property: background-color;
+  transition-property: color;
   transition-duration: var(--animation-duration);
   transition-timing-function: var(--animation-function);
 }
@@ -113,6 +114,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  bottom: -1px;
 }
 .site-nav .link.current {
   color: var(--accent-color);
@@ -121,6 +123,34 @@ img {
 .current {
   color: var(--accent-color);
 }
+.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+/* .current-prtf-page {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 78px;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
+} */
+/* .studio-page {
+  position: absolute;
+  color: var(--accent-color);
+
+  transition-property: color;
+  transition-duration: var(--animation-duration);
+  transition-timing-function: var(--animation-function);
+} */
 .studio-page::after {
   content: "";
   position: absolute;
@@ -131,6 +161,16 @@ img {
   background: var(--accent-color);
   border-radius: 2px;
   opacity: 0;
+}
+.second-page::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 78px;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
 }
 .prtf-page::after {
   content: "";
@@ -590,7 +630,7 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--ftr-link-color);
   fill: var(--first-section-color);
 }
 .footer-item-link:hover,
