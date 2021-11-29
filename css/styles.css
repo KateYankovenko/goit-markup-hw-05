@@ -133,24 +133,6 @@ img {
   background: var(--accent-color);
   border-radius: 2px;
 }
-/* .current-prtf-page {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 78px;
-  height: 4px;
-  background: var(--accent-color);
-  border-radius: 2px;
-} */
-/* .studio-page {
-  position: absolute;
-  color: var(--accent-color);
-
-  transition-property: color;
-  transition-duration: var(--animation-duration);
-  transition-timing-function: var(--animation-function);
-} */
 .studio-page::after {
   content: "";
   position: absolute;
@@ -714,6 +696,8 @@ img {
   display: block;
   width: 100%;
   height: 100%;
+
+  overflow: hidden;
 }
 .working-project:hover,
 .working-project:focus {
@@ -725,7 +709,6 @@ img {
   position: absolute;
   left: 0;
   top: 0;
-  opacity: 0;
 
   margin: 0;
   padding: 63px 24px;
@@ -738,13 +721,12 @@ img {
   letter-spacing: 0.03em;
   color: var(--section-text-color);
   background: var(--card-bcg-color);
-  transform: translateY(100%);
+  transform: translateY(101%);
 
   transition: transform var(--animation-duration) var(--animation-function);
 }
 .working-project:hover .project-description {
   transform: translateY(0);
-  opacity: 1;
 }
 .image {
   display: block;
